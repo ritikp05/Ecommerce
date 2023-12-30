@@ -29,7 +29,6 @@ return (
       {cartdata.length>0?
         cartdata.map((item)=>{
 return(
-
   <div className='flex flex-col sm:w-4/5 sm:flex-row   w-60 h-auto flex-wrap  p-2 border-2 justify-start shadow-md rounded-xl shadow-slate-500 items-center m-2' key={item.id}>
 
 <img src={item?.image}  className=' h-44  sm:w-40 sm:h-44 w-40 pt-2' /><h1 className='sm:pl-4  sm:pr-4 text-center font-semibold font-mono sm:text-xl sm:w-52  whitespace-break-spaces'>
@@ -54,15 +53,21 @@ return(
 </section>
 
  <button onClick={()=>removeitem(item.id)} className='bg-red-500 sm:ml-6 px-6 py-2 sm:mt-2 mt-6  text-xl  rounded-xl text-white active:scale-95 scale-110 '><MdDelete/></button>
+ 
   </div>
+
+
 )
         })
-       :<div className='mt-40'><Emptycart/></div>}
-    </div>
-
-<div className='m-20'> 
+       :<div className='mt-40  mx-auto'><Emptycart/></div>}
+    <section className='m-20 px-10 bg-slate-500 w-full  text-center py-4 flex sm:flex-row flex-col justify-evenly  items-center text-white font-sans tracking-widest'>
+<div > 
   Total Price - {a}$
 </div>
+  <button className='mt-3 ml-4 bg-red-500 p-2 w-48 text-base rounded-lg' onClick={()=>dispatch({type:"CLEAR_ALL"})}>Clear All</button>
+</section>
+
+    </div>
     </>
   )
 }

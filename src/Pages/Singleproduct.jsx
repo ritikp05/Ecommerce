@@ -9,7 +9,6 @@ import {toast } from 'react-toastify';
 const Singleproduct = () => {
   const navigate = useNavigate();
   const { id } = useParams();
-
   const { state, dispatch } = useContext(DataContext)
   async function getdata() {
     const { data } = await axios.get(`https://fakestoreapi.com/products/${id}`);

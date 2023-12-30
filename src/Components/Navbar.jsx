@@ -35,10 +35,10 @@ const Navbar = () => {
 
         <div className=' gap-4 pr-8 items-center hidden sm:flex'>
           <NavLink to='/' >
-            HOME
+            Home
           </NavLink>
           <NavLink to='/contact'>
-            CONTACT
+            Contact
           </NavLink>
           {
             user ?
@@ -71,10 +71,10 @@ const Navbar = () => {
 
 
         <NavLink to='/' className='text-2xl' onClick={() => Setopen(false)}>
-          HOME
+          Home
         </NavLink>
         <NavLink to='/contact' className='text-2xl' onClick={() => Setopen(false)}>
-          CONTACT
+          Contact
         </NavLink>
         {
           user ?
